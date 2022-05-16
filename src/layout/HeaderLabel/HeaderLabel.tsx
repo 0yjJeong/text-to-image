@@ -13,7 +13,7 @@ const HeaderLabel: FC<HeaderLabelProps> = ({ name, url, Icon }) => {
   const IconComponent = Icon ?? (() => <AiFillGithub />);
 
   const githubFragment = name ? (
-    <a className='border' target='_blank' href={url}>
+    <a className='border' target='_blank' rel='noreferrer' href={url}>
       {name}
       <IconComponent />
     </a>
