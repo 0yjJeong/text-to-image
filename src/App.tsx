@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './layout/Header/Header';
+import HeaderLabel from './layout/HeaderLabel/HeaderLabel';
+import Page from './layout/Page/Page';
+import pkg from '../package.json';
 
 function App() {
+  const { name, url } = pkg.author;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page>
+      <Header logo='./thumbnail.png' title='Text to image'>
+        <HeaderLabel name={name} url={url} />
+      </Header>
+      Hello, world!
+    </Page>
   );
 }
 
