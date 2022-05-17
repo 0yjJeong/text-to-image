@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { NavigationConfig } from '../../types';
+import { NavigationMap } from '../../types';
 
 const Tab = styled.div`
   & + & {
@@ -33,6 +33,11 @@ const builtComponent: FC<TabProps> = ({ name, children }) => {
       <div className='content'>{children}</div>
     </Tab>
   );
+};
+
+export type NavigationConfig = {
+  name: keyof NavigationMap;
+  component: React.ComponentType;
 };
 
 export default class NavigationBuilder {

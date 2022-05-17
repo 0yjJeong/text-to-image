@@ -1,5 +1,3 @@
-import { ComponentType } from 'react';
-
 export type Mode = 'light' | 'dark';
 
 export type Padding = number;
@@ -13,11 +11,6 @@ export type Gradient =
   | 'gradient3'
   | 'gradient4'
   | 'gradient5';
-
-export type NavigationConfig = {
-  name: keyof NavigationMap;
-  component: ComponentType;
-};
 
 export type NavigationMap = {
   /**
