@@ -8,6 +8,8 @@ Text-To-Image is an editor that allows you to make image from text.
 
 The Text-To-Image consists of a number of different directories:
 
+- **atom** State management made up of a number of atoms.
+- **components** Components that make up the editor.
 - **layout** The layout that makes up the framework of the project.
 
 ## Getting started
