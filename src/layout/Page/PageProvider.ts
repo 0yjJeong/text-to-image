@@ -26,6 +26,10 @@ export const typography = {
 };
 
 const theme = {
+  palette,
+
+  typography,
+
   app: {
     background: null,
     color: '#fff',
