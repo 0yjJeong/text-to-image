@@ -5,6 +5,6 @@ export const textAtom = atom('');
 
 export const paddingAtom = atom('');
 
-export const modeAtom = atom<Mode>('dark');
+export const modeAtomAtom = atom<Mode>('dark');
 
-export const gradient = atom<Gradient>('gradient0');
+export const gradientAtom = atom<Gradient>('gradient0');
