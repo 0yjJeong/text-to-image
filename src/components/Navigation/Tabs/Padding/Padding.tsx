@@ -7,7 +7,9 @@ const PaddingTab = () => {
   const [padding, setPadding] = useAtom(paddingAtom);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPadding(parseInt(e.target.value, 10));
+    const regex = /\d*/i;
+    const value = (e.target.value.match(regex) || [''])[0];
+    setPadding(value);
   };
 
   return <InputWithUnit value={padding} onChange={onChange} />;

@@ -9,7 +9,7 @@ const Canvas = React.forwardRef<HTMLDivElement>(({}, ref) => {
   const [padding] = useAtom(paddingAtom);
 
   const textFragment = text ? (
-    <CanvasInner padding={padding}>{text}</CanvasInner>
+    <CanvasInner padding={parseInt(padding)}>{text}</CanvasInner>
   ) : null;
 
   return <CanvasOuter ref={ref}>{textFragment}</CanvasOuter>;
