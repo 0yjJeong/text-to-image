@@ -10,10 +10,10 @@ interface InputWithUnitType extends InputBaseProps {
   unit?: string;
 }
 
-const InputWithUnit: FC<InputWithUnitType> = ({ unit = 'px' }) => {
+const InputWithUnit: FC<InputWithUnitType> = ({ unit = 'px', ...rest }) => {
   return (
     <>
-      <InputBase />
+      <InputBase {...rest} />
       <Unit>{unit}</Unit>
     </>
   );
