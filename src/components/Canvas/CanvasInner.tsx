@@ -11,6 +11,7 @@ const CanvasInner = styled.div<CanvasInnerProps>`
   padding: ${(p) => p.padding}px;
   border-radius: 10px;
   white-space: pre-wrap;
+  box-shadow: 0 10px 20px 5px rgb(0 0 0 / 16%);
 `;
 
 export default CanvasInner;
