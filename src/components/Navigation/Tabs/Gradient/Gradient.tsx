@@ -2,7 +2,6 @@ import React from 'react';
 import { useAtom } from 'jotai';
 import GradientButtonList from '../../../GradientList/GradientList';
 import { gradientAtom, gradientThemeAtom } from '../../../../atom';
-import { defaultTheme } from '../../../../hooks/useOnInit';
 import { Gradient } from '../../../../types';
 
 const GradientTab = () => {
@@ -19,7 +18,7 @@ const GradientTab = () => {
   return (
     <GradientButtonList
       gradient={gradient}
-      gradientTheme={gradientTheme ?? defaultTheme}
+      gradientTheme={gradientTheme}
       onClick={onClick}
     />
   );
