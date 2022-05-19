@@ -10,7 +10,13 @@ const TextTab = () => {
     setText(e.target.value);
   };
 
-  return <Textarea value={text} onChange={onChange} />;
+  return (
+    <Textarea
+      placeholder='Please enter text.'
+      value={text}
+      onChange={onChange}
+    />
+  );
 };
 
 export default TextTab;
