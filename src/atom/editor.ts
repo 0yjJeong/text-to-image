@@ -3,7 +3,7 @@ import { Gradient, GradientTheme, Mode } from '../types';
 
 export const textAtom = atom('');
 
-export const paddingAtom = atom('');
+export const paddingAtom = atom('24');
 
 export const modeAtomAtom = atom<Mode>('dark');
 
