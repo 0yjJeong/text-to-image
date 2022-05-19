@@ -21,20 +21,36 @@ function App() {
       </Header>
       <Content>
         <div className='navigations'>{defaultNavigation}</div>
-        <Canvas />
+        <div className='canvas'>
+          <Canvas />
+        </div>
       </Content>
     </Page>
   );
 }
 
 const Content = styled.div`
-  display: flex;
+  display: grid;
   margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
 
   .navigations {
-    flex: 1;
-    padding-right: 10px;
-    border-right: 2px solid ${(p) => p.theme.palette['black1']};
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: auto 800px;
+
+    .navigations {
+      padding-right: 32px;
+      border-right: 1px solid ${(p) => p.theme.palette['black1']};
+    }
+
+    .canvas {
+      margin-left: 32px;
+    }
   }
 `;
 

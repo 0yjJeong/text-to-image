@@ -5,15 +5,14 @@ type CanvasOuterProps = {
 };
 
 const CanvasOuter = styled.div<CanvasOuterProps>`
-  flex: 800px;
   border-radius: 20px;
+  margin: auto;
   display: flex;
   background: ${(p) => p.background};
+  max-width: 800px;
   height: 420px;
   overflow-y: hidden;
-  max-width: 800px;
   justify-content: center;
-  margin-left: 10px;
 `;
 
 export default CanvasOuter;
