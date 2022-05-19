@@ -16,4 +16,8 @@ export const defaultNavigation = createNavigation()
     name: 'padding',
     component: tabRefs.getTabFactory('padding'),
   })
+  .registerTab({
+    name: 'gradient',
+    component: tabRefs.getTabFactory('gradient'),
+  })
   .build();

@@ -1,3 +1,5 @@
+import { CSSProperties } from 'styled-components';
+
 export type Mode = 'light' | 'dark';
 
 export type Padding = number;
@@ -11,6 +13,13 @@ export type Gradient =
   | 'gradient3'
   | 'gradient4'
   | 'gradient5';
+
+/**
+ * Map of gradient name and color.
+ */
+export type GradientTheme = Partial<{
+  [key in Gradient]: string;
+}>;
 
 export type NavigationMap = {
   /**

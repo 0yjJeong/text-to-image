@@ -1,10 +1,14 @@
-import styled from 'styled-components';
+import styled, { CSSProperties } from 'styled-components';
 
-const CanvasOuter = styled.div`
+type CanvasOuterProps = {
+  background: CSSProperties['background'];
+};
+
+const CanvasOuter = styled.div<CanvasOuterProps>`
   flex: 800px;
   border-radius: 20px;
   display: flex;
-  background: linear-gradient(blue, pink);
+  background: ${(p) => p.background};
   height: 420px;
   overflow-y: hidden;
   max-width: 800px;

@@ -6,9 +6,13 @@ import pkg from '../package.json';
 import { defaultNavigation } from './components/Navigation';
 import Canvas from './components/Canvas/Canvas';
 import styled from 'styled-components';
+import useOnInit from './hooks/useOnInit';
 
 function App() {
   const { name, url } = pkg.author;
+  const { mount } = useOnInit();
+
+  if (!mount) return null;
 
   return (
     <Page>

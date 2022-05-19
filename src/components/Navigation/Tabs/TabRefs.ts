@@ -1,5 +1,6 @@
 import TextTab from './Text';
 import PaddingTab from './Padding';
+import GradientTab from './Gradient';
 import { NavigationMap } from '../../../types';
 
 type NavigationTabRefs = {
@@ -11,7 +12,7 @@ export default class TabRefs {
     text: TextTab,
     padding: PaddingTab,
     mode: null,
-    gradient: null,
+    gradient: GradientTab,
   };
 
   getTabFactory(name: keyof NavigationMap) {
