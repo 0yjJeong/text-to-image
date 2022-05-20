@@ -7,10 +7,11 @@ import { defaultNavigation } from './components/Navigation';
 import Canvas from './components/Canvas/Canvas';
 import styled from 'styled-components';
 import useOnInit from './hooks/useOnInit';
+import ExportButton from './components/Export/ExportButton';
 
 function App() {
   const { name, url } = pkg.author;
-  const { mount } = useOnInit();
+  const { mount, canvasRef } = useOnInit();
 
   if (!mount) return null;
 
@@ -22,7 +23,8 @@ function App() {
       <Content>
         <div className='navigations'>{defaultNavigation}</div>
         <div className='canvas'>
-          <Canvas />
+          <Canvas ref={canvasRef} />
+          <ExportButton />
         </div>
       </Content>
     </Page>

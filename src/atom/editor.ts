@@ -1,3 +1,4 @@
+import { RefObject, ReactInstance } from 'react';
 import { atom } from 'jotai';
 import { Gradient, GradientTheme, Mode } from '../types';
 
@@ -30,3 +31,7 @@ export const gradientThemeToCssAtom = atom((get) => {
 
   return gradientCSS;
 });
+
+export const componentToPrintAtom = atom<RefObject<HTMLDivElement> | null>(
+  null
+);
