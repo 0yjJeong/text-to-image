@@ -21,8 +21,8 @@ function App() {
         <HeaderLabel name={name} url={url} />
       </Header>
       <Content>
-        <div className='navigations'>{defaultNavigation}</div>
-        <div className='canvas'>
+        <div className='left'>{defaultNavigation}</div>
+        <div className='right'>
           <Canvas ref={canvasRef} />
           <ExportButton />
         </div>
@@ -38,19 +38,19 @@ const Content = styled.div`
   margin-right: auto;
   max-width: 1280px;
 
-  .navigations {
+  .left {
     margin-bottom: 40px;
   }
 
   @media (min-width: 1080px) {
     grid-template-columns: auto 800px;
 
-    .navigations {
+    .left {
       padding-right: 32px;
       border-right: 1px solid ${(p) => p.theme.palette['black1']};
     }
 
-    .canvas {
+    .right {
       margin-left: 32px;
     }
   }
