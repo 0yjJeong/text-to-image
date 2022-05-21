@@ -24,7 +24,15 @@ function App() {
         <div className='left'>{defaultNavigation}</div>
         <div className='right'>
           <Canvas ref={canvasRef} />
-          <ExportButton />
+          <div
+            style={{
+              marginTop: '1rem',
+              display: 'flex',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <ExportButton />
+          </div>
         </div>
       </Content>
     </Page>
