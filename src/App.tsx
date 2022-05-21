@@ -7,7 +7,7 @@ import { defaultNavigation } from './components/Navigation';
 import Canvas from './components/Canvas/Canvas';
 import styled from 'styled-components';
 import useOnInit from './hooks/useOnInit';
-import ExportButton from './components/Export/ExportButton';
+import ExportButton from './components/ExportButton';
 
 function App() {
   const { name, url } = pkg.author;
