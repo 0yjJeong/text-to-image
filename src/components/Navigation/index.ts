@@ -1,23 +1,19 @@
 import NavigationBuilder from './NavigationBuilder';
-import { TabRefs } from './Tabs';
-
-export const createTabRefs = () => new TabRefs();
+import { TextTab, PaddingTab, GradientTab } from './Tabs';
 
 export const createNavigation = () => new NavigationBuilder();
-
-const tabRefs = createTabRefs();
 
 export const defaultNavigation = createNavigation()
   .registerTab({
     name: 'text',
-    component: tabRefs.getTabFactory('text'),
+    component: TextTab,
   })
   .registerTab({
     name: 'padding',
-    component: tabRefs.getTabFactory('padding'),
+    component: PaddingTab,
   })
   .registerTab({
     name: 'gradient',
-    component: tabRefs.getTabFactory('gradient'),
+    component: GradientTab,
   })
   .build();
