@@ -8,7 +8,9 @@ type HeaderProps = {
 };
 
 const Header: FC<HeaderProps> = ({ title, logo, children }) => {
-  const logoFragment = <>{logo ? <img src={logo} alt='logo' /> : null}</>;
+  const logoFragment = (
+    <>{logo ? <img src={process.env.PUBLIC_URL + logo} alt='logo' /> : null}</>
+  );
 
   const titleFragment = title ?? null;
 

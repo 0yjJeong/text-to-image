@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Page>
-      <Header logo='./thumbnail.png' title='Text to image'>
+      <Header logo='/thumbnail.png' title='Text to image'>
         <HeaderLabel name={name} url={url} />
       </Header>
       <Content>
